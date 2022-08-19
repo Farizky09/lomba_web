@@ -25,7 +25,6 @@ Route::middleware(['auth'])->group(function(){
        Route::put('/siswa/{id}/',[SiswaController::class,'update']);
        Route::delete('/siswa/{id}/',[SiswaController::class,'destroy']);
 
-
        Route::get('/ekskul',[EkskulController::class,'index']);
        Route::get('/ekskul/create',[EkskulController::class,'create']);
        Route::post('/ekskul/store',[EkskulController::class,'store']);
