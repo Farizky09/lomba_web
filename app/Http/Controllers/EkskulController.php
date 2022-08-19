@@ -18,4 +18,19 @@ class EkskulController extends Controller
         return redirect('/ekskul');
 
     }
+    public function edit($id){
+        $ekskul = Ekskul::find($id);
+        return view('ekskul.edit',compact(['ekskul']));
+    }
+    public function update($id, Request $request){
+        $ekskul = Ekskul::find($id);
+        $ekskul->update($request->except(['_token','submit']));
+        return redirect('/ekskul');
+    }
+    public function destroy($id){
+        $ekskul = Ekskul::find($id);
+        $ekskul->delete();
+        return redirect('/ekskul');
+
+    }
 }
