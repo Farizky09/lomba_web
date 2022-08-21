@@ -1,6 +1,27 @@
-@extends('layouts.app')
+@extends('layouts.master')
+
 @section('content')
-    <div class="container">
+<div class="class-main">
+    <div class="main-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+             <div class="panel">
+                <div class="panel-heading">
+                    <h3 class="panel-tittle">Data siswa
+
+                    </h3>
+                </div>
+             </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+@stop
+@section('content1')
+    {{--  <div class="container">
         <a href="/ekskul/create"><button class="btn btn-primary">Tambah</button></a>
         <hr>
         <table class="table table-dark table-striped">
@@ -31,5 +52,5 @@
             </td>
         </tr>
     @endforeach
-    </table>
+    </table>  --}}
 @endsection

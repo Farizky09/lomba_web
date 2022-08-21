@@ -1,6 +1,12 @@
 @extends('layouts.master')
 @section('content')
-<div class="container"><form class="form-group" action="/siswa/{{$siswa->id}}" method="POST">
+<div class="container">
+  @if(session('sukses'))
+  <div class="alert alert-primary" role="alert">
+      {{session('sukses')}}
+    </div>
+    @endif
+  <form class="form-group" action="/siswa/{{$siswa->id}}" method="POST">
     @method('put')
     @csrf
     <div class="mb-3">

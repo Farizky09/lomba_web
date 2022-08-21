@@ -15,7 +15,7 @@ class SiswaController extends Controller
     }
     public function store(Request $request){
         Siswa::create($request->except(['_token','submit']));
-        return redirect('/siswa');
+        return redirect('/siswa')->with('sukses','Data berhasil ditambah');
 
     }
     public function edit($id){
@@ -25,12 +25,12 @@ class SiswaController extends Controller
     public function update($id, Request $request){
         $siswa = Siswa::find($id);
         $siswa->update($request->except(['_token','submit']));
-        return redirect('/siswa');
+        return redirect('/siswa')->with('sukses','Data berhasil diupdate');
     }
     public function destroy($id){
         $siswa = Siswa::find($id);
         $siswa->delete();
-        return redirect('/siswa');
+        return redirect('/siswa')->with('sukses','Data berhasil dihapus');
 
     }
 }
